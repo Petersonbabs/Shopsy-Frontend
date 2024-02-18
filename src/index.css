@@ -1,0 +1,340 @@
+@import "/variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: var(--gray);
+}
+
+button {
+    border: none;
+}
+
+.btn {
+    background: var(--orange);
+    border: none;
+    padding: .5rem 2rem;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.green-btn {
+    background: var(--green);
+}
+
+.full-btn {
+    width: 100%;
+    padding: 1rem;
+}
+
+.transparent-btn{
+    background: transparent;
+    color: var(--green);
+    border: 1px solid var(--green);
+}
+
+.btn:hover {
+    background: var(--dark-orange);
+}
+
+.green-btn:hover {
+    background: var(--dark-green);
+}
+
+.transparent-btn:hover{
+    background: #fff;
+    color: var(--dark-green);
+}
+
+.form{
+    background: #fff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+}
+
+input, select{
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+
+.round-img{
+    border-radius: 50%;
+}
+
+
+.user-img{
+    width: 40px;
+    height: 40px;
+}
+
+.user-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+select{
+    padding: 1rem ;
+    margin: 1rem 0;
+}
+
+a {
+    color: #000;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    padding: .7rem 1rem;
+    justify-content: space-between;
+    background: var(--green);
+
+    box-shadow: 0 2px 2px #0000008A;
+}
+
+nav * {
+    color: #fff;
+}
+
+nav i {
+    font-size: 1.1rem;
+}
+
+.nav-right button {
+    margin-left: 1rem;
+}
+
+
+.bottom-nav-con {
+    grid-template-columns: repeat(5, 1fr);
+    max-width: var(--max-width);
+    margin: auto;
+
+}
+
+.bottom-nav-con div {
+    padding: .5rem 1rem;
+    display: grid;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.bottom-nav-con div:hover {
+    background: var(--gray);
+}
+
+.bottom-nav-con a:focus {
+    background: var(--gray);
+}
+
+.bottom-nav-con div * {
+    color: #000;
+}
+
+
+
+/* 
+==========
+==========
+HOME
+==========
+==========
+*/
+
+
+.products-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .4rem;
+    margin: 2rem auto;
+    width: 80vw;
+    max-width: var(--max-width);
+    padding: 2rem 0;
+}
+
+@media screen and (min-width: 600px) {
+    
+    .home .products-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 780px) {
+    
+    .home .products-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.hero-content div {
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    color: #000;
+    max-width: var(--max-width);
+    display: flex;
+}
+
+.hero-content input {
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+.hero-content div i {
+    cursor: pointer;
+}
+
+/* 
+==========
+==========
+END OF HOME
+==========
+==========
+*/
+
+
+
+
+
+/* 
+====================
+====================
+SELL PAGE
+====================
+====================
+*/
+
+.sell-form{
+    margin: 3rem 0;
+}
+
+.sellPageHeader h3 {
+    font-weight: 400;
+}
+
+.sellPageHeader P {
+    color: var(--green);
+}
+
+.sellPageHeader i {
+    margin-right: 10px;
+}
+
+
+.sell-form .negotiable{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: .2rem;
+    width: max-content;
+}
+
+.sell-form input{
+    margin: 1rem auto;
+    padding: .6rem;
+}
+
+.sell-product-pic{
+    margin-top: 1rem;
+    line-height: 2;
+}
+
+.sell-product-pic input{
+    border: none;
+}
+
+
+/* 
+====================
+====================
+END OF SELL PAGE
+====================
+====================
+*/
+
+
+
+
+
+/* 
+====================
+====================
+SINGLE PRODUCT
+====================
+====================
+*/
+
+
+.single-page-img img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.category{
+    margin: 1rem 0;
+}
+
+.category p{
+    background: #fff;
+    width: fit-content;
+    padding: .2rem .5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+.product-details .user-sec{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.product-details div button{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: .5rem 0;
+}
+
+.product-details>div{
+    background: #fff;
+    margin: 1rem 0;
+    padding: .7rem;
+    border-radius: 10px;
+}
+
+.product-details>div:nth-child(1){
+    display: grid;
+    gap: 1rem;
+}
+
+.product-details>div:nth-child(2) p{
+    line-height: 1.5;
+}
+
+/* 
+====================
+====================
+END OF SINGLE PRODUCT
+====================
+====================
+*/
