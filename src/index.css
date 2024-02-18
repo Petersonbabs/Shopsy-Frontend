@@ -338,3 +338,48 @@ END OF SINGLE PRODUCT
 ====================
 ====================
 */
+
+
+
+
+
+/* 
+====================
+====================
+ACCOUNT PAGE
+====================
+====================
+*/
+
+
+
+.account-page-wrapper>div>div{
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1rem;
+    margin: 10px 0;
+}
+
+.account-page-wrapper>div h3{
+    font-weight: 400;
+}
+
+.account-page-wrapper div span{
+    color: #999;
+}
+
+
+
+
+/* 
+====================
+====================
+END OF ACCOUNT PAGE
+====================
+====================
+*/

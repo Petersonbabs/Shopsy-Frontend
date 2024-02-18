@@ -5,7 +5,7 @@ import { ProductsList } from '../../../ProductsList'
 const SingleProduct = () => {
 
   const { id } = useParams()
-  const { title, price, description, rating, image, category } = ProductsList.find(item => item.id == id)
+  const { title, price, description, image, category } = ProductsList.find(item => item.id == id)
 
   const style = {
     width: "90vw",
@@ -61,9 +61,8 @@ const SingleProduct = () => {
 
         <div>
           <div className='user-sec'>
-            <div className="round-img user-img">
-              <img src="../src/assets/img-2.jpg" alt="" />
-            </div>
+            
+            
             <h4>Peter Babs</h4>
           </div>
           <button className='btn green-btn full-btn'>
