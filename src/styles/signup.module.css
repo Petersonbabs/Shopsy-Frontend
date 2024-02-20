@@ -1,0 +1,23 @@
+.signup{
+    width: 60vw;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.formGroup{
+    padding: 10px;
+}
+
+.formGroup label{
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: var(--green);
+    margin-bottom: 10px;
+}
+
+.formGroup input{
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}

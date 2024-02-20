@@ -44,7 +44,7 @@ const Account = () => {
           </div>
 
           <div>
-            <i class="fa-solid fa-wallet"></i>
+            <i className="fa-solid fa-wallet"></i>
             <div>
               <h3>N5,000</h3>
               <span>MY BALANCE</span>
@@ -56,18 +56,18 @@ const Account = () => {
 
         <div>
           <div>
-            <i class="fa-solid fa-users"></i>
+            <i className="fa-solid fa-users"></i>
             <h3>Followers</h3>
           </div>
 
           <div>
-            <i class="fa-solid fa-bullhorn"></i>
+            <i className="fa-solid fa-bullhorn"></i>
             <h3>My adverts</h3>
           </div>
 
 
           <div>
-            <i class="fa-regular fa-comment"></i>
+            <i className="fa-regular fa-comment"></i>
             <h3>Feedback</h3>
           </div>
 

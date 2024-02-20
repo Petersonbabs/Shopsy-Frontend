@@ -8,6 +8,8 @@ import Account from "../pages/children pages/Account"
 import ProductsLanding from '../pages/children pages/ProductsLanding'
 import SingleProduct from '../pages/children pages/SingleProduct'
 import Sell from "../pages/children pages/Sell";
+import Signup from '../pages/children pages/Signup'
+import SignIn from '../pages/children pages/SignIn'
 
 
 
@@ -23,6 +25,21 @@ const Router = createBrowserRouter([
         index: true,
         element: <Home />
       }, 
+
+      
+      // signup
+      {
+        path: "signup",
+        element: <Signup />
+      },
+
+
+      // signin
+      {
+        path: "signin",
+        element: <SignIn />
+      },
+
 
       // saved
       {

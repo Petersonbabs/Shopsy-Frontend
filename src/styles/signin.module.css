@@ -1,0 +1,17 @@
+
+
+.signinform{
+    width: 95vw;
+    margin: auto;
+    max-width: var(--max-width);
+}
+
+.formGroup{
+    padding: 10px;
+}
+
+.formGroup input{
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
