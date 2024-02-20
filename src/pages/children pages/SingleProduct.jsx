@@ -1,11 +1,16 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { ProductsList } from '../../../ProductsList'
+import { useProductContext } from '../../context/ProductContext'
+
+
 
 const SingleProduct = () => {
-
+  const ProductsList = useProductContext();
+  
   const { id } = useParams()
-  const { title, price, description, image, category } = ProductsList.find(item => item.id == id)
+  const product = ProductsList.find(item => item._id == id)
+  
+  // const { title, price, description } = product
 
   const style = {
     width: "90vw",
@@ -36,12 +41,12 @@ const SingleProduct = () => {
 
     <div className='single-product' style={style
     }>
-      <div className="category">
+      {/* <div className="category">
         <p>{category}</p>
-      </div>
+      </div> */}
 
       <div className="single-page-img" style={imgSecStyle}>
-        <img src={image} alt="" width={"100%"} style={imgStyle} />
+        <img src="https://cdn.pixabay.com/photo/2024/01/31/11/07/monkey-8543906_1280.jpg" alt="" width={"100%"} style={imgStyle} />
       </div>
 
       <div className="product-details" style={detailStyle}>
@@ -51,11 +56,11 @@ const SingleProduct = () => {
             <span>Lagos, Ikeja </span>
             <span>Posted 8 hours ago</span>
           </div>
-          <h3>{title}</h3>
+          <h3>{"fgjhkjl"}</h3>
         </div>
 
         <div>
-          <p>{description}</p>
+          <p>{}</p>
         </div>
 
 
@@ -66,19 +71,19 @@ const SingleProduct = () => {
             <h4>Peter Babs</h4>
           </div>
           <button className='btn green-btn full-btn'>
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
             <span>Show contact</span>
           </button>
 
           <button className='btn transparent-btn full-btn'>
-            <i class="fa-regular fa-message"></i>
+            <i className="fa-regular fa-message"></i>
             <span>Show contact</span>
           </button>
         </div>
 
 
         <div>
-          <h2>${price}</h2>
+          <h2>${}</h2>
         </div>
 
       </div>

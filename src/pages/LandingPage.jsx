@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import BottomNav from '../components/BottomNav';
 import Footer from "../components/Footer"
 import AuthProvider from '../context/authContext';
+import ProductProvider from '../context/ProductContext';
 
 const LandingPage = () => {
   const [token, setToken] = useState("")
@@ -16,10 +17,12 @@ const LandingPage = () => {
   return (
     <div>
       <AuthProvider>
-        <Nav />
-        <Outlet />
-        <Footer />
-        <BottomNav />
+        <ProductProvider>
+          <Nav />
+          <Outlet />
+          <Footer />
+          <BottomNav />
+        </ProductProvider>
       </AuthProvider>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 
-export const ProductCard = ({ image, title, price, link }) => {
+export const ProductCard = ({ title, price, link }) => {
 
     const style = {
         // width: "190px",
@@ -31,8 +31,11 @@ export const ProductCard = ({ image, title, price, link }) => {
 
         <Link to={link}>
             <div style={style}>
+
                 <div className="product-img" style={imgStyle}>
-                    <img src={image} alt='Product image' width={"100%"} style={img} height={"100%"} />
+
+                   <img src="./src/assets/gucci-bag.jpg" alt='Product image' width={"100%"} style={img} height={"100%"} />
+
                 </div>
 
                 <h5 style={titleStyle}>{title}</h5>

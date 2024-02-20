@@ -8,19 +8,33 @@ const Nav = () => {
     position: "sticky",
     top: "0"
   }
+
+  const divStyle = {
+    display: "flex",
+    alignItem: "center",
+    gap: "10px",
+    paddingTop: "8px"
+  }
+
+  const navright = {
+    display: "flex",
+    alignItem: "center",
+    gap: "20px"
+  }
+
   return (
     <nav style={style}>
 
       <Link to={"/"}><h1>Logo</h1></Link>
 
-      <div className="nav-right">
+      <div style={navright}>
 
-        {token ? (<div><Link to={"/account"}>
+        {token ? (<div style={divStyle}><Link to={"/account"}>
           {/* <span><i className="fa-solid fa-user"></i></span> */}
           <span><p>{`${user?.firstname} ${user?.lastname}`}</p></span>
           <button className='btn' onClick={logout}>Logout</button>
         </Link>
-          </div>) : (<div>
+          </div>) : (<div style={divStyle}>
             <p><Link to={"/signup"}>Signup</Link></p>
             <p><Link to={"/signin"}>Login</Link></p>
           </div>)}
@@ -28,6 +42,7 @@ const Nav = () => {
             <button className='btn sell-btn'>SELL</button>
           </Link>
       </div>
+
     </nav>
   )
 }

@@ -1,9 +1,12 @@
-import React from 'react'
-import { ProductsList } from '../../../ProductsList'
-import { ProductCard } from '../../components/ProductCard'
+import React from 'react';
+import { ProductCard } from '../../components/ProductCard';
+import { useProductContext } from '../../context/ProductContext';
+
+
 
 
 const Home = () => {
+  const allProducts = useProductContext([])
 
   const heroStyle = {
     background: "var(--green)",
@@ -37,10 +40,10 @@ const Home = () => {
 
       <div className='products-list'>
         {
-          ProductsList.map((el, i) => {
+          allProducts.map((el, i) => {
             return (
               <div className='product' key={i}>
-                <ProductCard image={el.image} title={el.title} price={el.price} link={`product/${el.id}`}/>
+                <ProductCard  title={el.title} price={el.price} link={`product/${el._id}`}/>
               </div>
             )
           })
