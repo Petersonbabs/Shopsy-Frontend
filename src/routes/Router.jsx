@@ -10,8 +10,9 @@ import SingleProduct from '../pages/children pages/SingleProduct'
 import Sell from "../pages/children pages/Sell";
 import Signup from '../pages/children pages/Signup'
 import SignIn from '../pages/children pages/SignIn'
+import ProtectedRoutes from './ProtectedRoutes'
 
-
+const isAuthenticated = ProtectedRoutes();
 
 
 const Router = createBrowserRouter([
@@ -64,7 +65,7 @@ const Router = createBrowserRouter([
 
       {
         path: "account",
-        element: <Account />
+        element: isAuthenticated() ? <Account /> : <SignIn />
       },
 
       // products

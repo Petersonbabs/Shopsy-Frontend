@@ -68,12 +68,20 @@ const AuthProvider = ({ children }) => {
     }
 
     // logout
-    const logout = () => {
-        localStorage.removeItem("token");
-        localStorage.removeItem("user");
-        setToken(null)
-        setUser({})
-        navigation("/")
+    const logout = async () => {
+        try {
+            const res = await axios.post(`${apiUrl}/auth/logout`, {token}) 
+            localStorage.removeItem("token");
+            localStorage.removeItem("user");
+            setToken(null)
+            setUser({})
+            navigation("/")
+
+            console.log(res);
+            
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     const values = {

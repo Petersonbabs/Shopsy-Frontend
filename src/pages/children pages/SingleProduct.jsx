@@ -3,14 +3,18 @@ import { useParams } from 'react-router-dom'
 import { useProductContext } from '../../context/ProductContext'
 
 
-
 const SingleProduct = () => {
   const ProductsList = useProductContext();
   
   const { id } = useParams()
   const product = ProductsList.find(item => item._id == id)
+  console.log(product);
+
+  if (!product) {
+    return <p>Loading</p>
+  }
   
-  // const { title, price, description } = product
+  
 
   const style = {
     width: "90vw",
@@ -56,7 +60,7 @@ const SingleProduct = () => {
             <span>Lagos, Ikeja </span>
             <span>Posted 8 hours ago</span>
           </div>
-          <h3>{"fgjhkjl"}</h3>
+          <h3>{product.title}</h3>
         </div>
 
         <div>
@@ -68,7 +72,7 @@ const SingleProduct = () => {
           <div className='user-sec'>
             
             
-            <h4>Peter Babs</h4>
+            <h4>{product.owner ? product.owner.email : "Peter Babs"}</h4>
           </div>
           <button className='btn green-btn full-btn'>
             <i className="fa-solid fa-phone"></i>
@@ -77,13 +81,15 @@ const SingleProduct = () => {
 
           <button className='btn transparent-btn full-btn'>
             <i className="fa-regular fa-message"></i>
-            <span>Show contact</span>
+            <span>Start 
+              Chat
+            </span>
           </button>
         </div>
 
 
         <div>
-          <h2>${}</h2>
+          <h2>${product.price}</h2>
         </div>
 
       </div>

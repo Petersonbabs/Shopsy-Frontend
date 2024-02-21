@@ -17,6 +17,7 @@ const AdHeader = () => {
   return (
     <div >
       <div style={adHeaderStyle} className='sellPageHeader'>
+        
         <p onClick={() => {
         }} style={{ visibility: nextPage > 0 ? 'visible' : "hidden" }}>
           <i className="fa-solid fa-chevron-left "></i>
@@ -35,7 +36,7 @@ const AdHeader = () => {
 
 const pages = [
   <FirstPage />,
-  <SecondPage />
+  <SecondPage />,
 ]
 
 
@@ -65,9 +66,11 @@ const Sell = () => {
   return (
     <div style={sellPageStyle} >
       <AdHeader />
+      
       <div className="sell-body">
         {pages[page]}
       </div>
+
       <div className='sell-footer'>
         <button onClick={hangleNextBtn} className='green-btn  full-btn btn '>
           {page == pages.length - 1 ? "Post ad" : "Next"}
