@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
@@ -13,6 +13,7 @@ import ProductProvider from './context/ProductContext';
 import Home from './pages/children pages/Home'
 import ProtectedRoutes from './routes/ProtectedRoutes'
 import SingleProduct from './pages/children pages/SingleProduct'
+import sellProvider from './context/sellContext'
 
 const App = () => {
 
@@ -27,19 +28,21 @@ const App = () => {
   return (
     <Router>
       <AuthProvider>
-        <ProductProvider>     
+        <ProductProvider>
           <Nav />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/signin' element={<SignIn />} />
-            <Route path='/product/:id' element={<SingleProduct />} />
-            <Route element={<ProtectedRoutes />}>
-              <Route path='/saved' element={<Saved />} />
-              <Route path='/sell' element={<Sell />} />
-              <Route path='/account' element={<Account />} />
-            </Route>
-          </Routes>
+          <sellProvider>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/signup' element={<Signup />} />
+              <Route path='/signin' element={<SignIn />} />
+              <Route path='/product/:id' element={<SingleProduct />} />
+              <Route element={<ProtectedRoutes />}>
+                <Route path='/saved' element={<Saved />} />
+                <Route path='/sell' element={<Sell />} />
+                <Route path='/account' element={<Account />} />
+              </Route>
+            </Routes>
+          </sellProvider>
           <Footer />
           <BottomNav />
         </ProductProvider>

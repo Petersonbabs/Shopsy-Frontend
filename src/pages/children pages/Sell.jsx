@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Outlet } from 'react-router-dom';
 import { FirstPage, SecondPage } from './AdForms';
+import { useProductContext } from '../../context/ProductContext';
+import { usesellContext } from '../../context/sellContext';
 
-let nextPage = 0
 const adHeaderStyle = {
   display: "flex",
   justifyContent: "space-between",
@@ -17,7 +18,7 @@ const AdHeader = () => {
   return (
     <div >
       <div style={adHeaderStyle} className='sellPageHeader'>
-        
+
         <p onClick={() => {
         }} style={{ visibility: nextPage > 0 ? 'visible' : "hidden" }}>
           <i className="fa-solid fa-chevron-left "></i>
@@ -42,19 +43,9 @@ const pages = [
 
 
 const Sell = () => {
+  const {hangleNextBtn, handleInputs, productData, page} = usesellContext()
 
-  const [page, setPage] = useState(nextPage)
-
-  const hangleNextBtn = () => {
-    const lastPage = page == pages.length - 1
-    if (lastPage) {
-      alert()
-    } else {
-      nextPage++
-      setPage((currPage) => currPage + 1)
-    }
-
-  }
+  
 
   const sellPageStyle = {
     width: "90vw",
@@ -66,7 +57,7 @@ const Sell = () => {
   return (
     <div style={sellPageStyle} >
       <AdHeader />
-      
+
       <div className="sell-body">
         {pages[page]}
       </div>

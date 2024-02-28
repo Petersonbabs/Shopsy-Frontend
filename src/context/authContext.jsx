@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
 
     // register user
     const registerUser = async (formDetails) => {
-        console.log(formDetails);
+        // console.log(formDetails);
         try {
 
             const res = await fetch(`${apiUrl}/auth/signup`, {
